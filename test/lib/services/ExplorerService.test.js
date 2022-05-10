@@ -13,4 +13,9 @@ describe('Unit Tests for ExplorerService class', () => {
             ])
         )
     })
+    test("Get the number of the explorers in node, we should only have 10 explorers in node", () => {
+        const explorers = Reader.readJsonFile("explorers.json");
+        const numberOfExplorersInNode = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
+        expect(numberOfExplorersInNode).toBe(10);
+    })
 })
