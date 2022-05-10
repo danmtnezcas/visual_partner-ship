@@ -8,6 +8,11 @@ class ExplorerService{
         const numberOfExplorersInNode = explorersInNode.length;
         return numberOfExplorersInNode;
     }
+    static getExplorersUsernamesByMission(explorers, mission) {
+        const explorersInNodeToGetUsernames = this.filterByMission(explorers, mission);
+        const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
+        return usernamesInNode;
+    }
 }
 
 module.exports = ExplorerService;
