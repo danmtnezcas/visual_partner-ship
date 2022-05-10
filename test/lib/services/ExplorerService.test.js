@@ -18,4 +18,11 @@ describe('Unit Tests for ExplorerService class', () => {
         const numberOfExplorersInNode = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
         expect(numberOfExplorersInNode).toBe(10);
     })
+    test("Get the explorer's usernames in Node, we should only have the explorer's usernames in node", () => {
+        const explorers = Reader.readJsonFile("explorers.json");
+        const usernamesInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
+        expect(usernamesInNode).toContain("ajolonauta1"); // This username is in node
+        //expect(usernamesInNode).toContain("ajolonauta9"); // This username isn't node
+        expect(usernamesInNode).toContain("ajolonauta15"); // This username is in node
+    })
 })
