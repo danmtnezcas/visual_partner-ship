@@ -8,7 +8,7 @@ describe('Unit Tests for ExplorerService class', () => {
         expect(explorersInNode).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({"name": "Woopa1"}), // This explorer is in node
-                expect.objectContaining({"name": "Woopa9"}), // This explorer isn't in node
+                //expect.objectContaining({"name": "Woopa9"}), // This explorer isn't in node
                 expect.objectContaining({"name": "Woopa15"}) // This explorer is in node
             ])
         )
