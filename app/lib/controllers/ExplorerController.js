@@ -18,6 +18,10 @@ class ExplorerController{
         const numberOfExplorersInNode = ExplorerService.getAmountOfExplorersByMission(explorers, mission);
         return numberOfExplorersInNode;
     }
+    static applyValidationInNumber(number) {
+        const score = FizzbuzzService.applyValidationInNumber(number);
+        return score;
+    }
 }
 
 module.exports = ExplorerController;
