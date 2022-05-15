@@ -18,4 +18,14 @@ describe("Unit Tests for FizzbuzzService class", () => {
             ])
         );
     });
+    test("Get the type of score", () => {
+        const score1 = FizzbuzzService.applyValidationInNumber(1);
+        expect(score1).toBe(1);
+        const score3 = FizzbuzzService.applyValidationInNumber(3);
+        expect(score3).toBe("Fizz");
+        const score5 = FizzbuzzService.applyValidationInNumber(5);
+        expect(score5).toBe("Buzz");
+        const score15 = FizzbuzzService.applyValidationInNumber(15);
+        expect(score15).toBe("FizzBuzz");
+    });
 });
