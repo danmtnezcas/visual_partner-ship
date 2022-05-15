@@ -17,8 +17,14 @@ app.get("/v1/explorers/:mission", (request, response) => {
 
 app.get("/v1/explorers/amount/:mission", (request, response) => {
     const mission = request.params.mission;
-    const numberOfExplorersInNode = ExplorerController.getExplorersAmonutByMission(mission);
-    response.json({mission: request.params.mission, quantity: numberOfExplorersInNode});
+    const numberOfExplorersInMission = ExplorerController.getExplorersAmonutByMission(mission);
+    response.json({mission: request.params.mission, quantity: numberOfExplorersInMission});
+});
+
+app.get("/v1/explorers/usernames/:mission", (request, response) => {
+    const mission = request.params.mission;
+    const usernamesInMission = ExplorerController.getExplorersUsernamesByMission(mission);
+    response.json({mission: request.params.mission, explorers: usernamesInMission});
 });
 
 app.listen(port, () => {
