@@ -18,6 +18,25 @@ class FizzbuzzService {
         });
         return explorersInNodeApplyValidation;
     }
+    static applyValidationInNumber(number) {
+        const validation = true;
+        var score = "";
+        switch (validation) {
+        case number === 3:
+            score = "Fizz";
+            break;
+        case number === 5:
+            score = "Buzz";
+            break;
+        case number === 15:
+            score = "FizzBuzz";
+            break;
+        default:
+            score = number;
+            break;
+        }
+        return score;
+    }
 }
 
 module.exports = FizzbuzzService;
