@@ -15,6 +15,12 @@ app.get("/v1/explorers/:mission", (request, response) => {
     response.json(explorersInMission);
 });
 
+app.get("/v1/explorers/amount/:mission", (request, response) => {
+    const mission = request.params.mission;
+    const numberOfExplorersInNode = ExplorerController.getExplorersAmonutByMission(mission);
+    response.json({mission: request.params.mission, quantity: numberOfExplorersInNode});
+});
+
 app.listen(port, () => {
     console.log(`FizzBuzz API in localhost:${port}`);
 });
