@@ -11,4 +11,10 @@ describe("Unit Tests for ExplorerController class", () => {
             ])
         );
     });
+    test("Get the explorer's usernames in Node, we should only have the explorer's usernames in node", () => {
+        const usernamesInNode = ExplorerController.getExplorersUsernamesByMission("node");
+        expect(usernamesInNode).toContain("ajolonauta1"); // This username is in node
+        //expect(usernamesInNode).toContain("ajolonauta9"); // This username isn't node
+        expect(usernamesInNode).toContain("ajolonauta15"); // This username is in node
+    });
 });
