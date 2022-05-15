@@ -17,4 +17,9 @@ describe("Unit Tests for ExplorerController class", () => {
         //expect(usernamesInNode).toContain("ajolonauta9"); // This username isn't node
         expect(usernamesInNode).toContain("ajolonauta15"); // This username is in node
     });
+    test("Get the number of the explorers in node, we should only have 10 explorers in node", () => {
+        const numberOfExplorersInNode = ExplorerController.getExplorersAmonutByMission("node");
+        expect(numberOfExplorersInNode).toBe(10);
+        //expect(numberOfExplorersInNode).toBe(11);
+    });
 });
