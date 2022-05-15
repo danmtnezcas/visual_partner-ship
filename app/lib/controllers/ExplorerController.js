@@ -16,7 +16,6 @@ class ExplorerController{
     static getExplorersAmonutByMission(mission) {
         const explorers = Reader.readJsonFile("explorers.json");
         const numberOfExplorersInNode = ExplorerService.getAmountOfExplorersByMission(explorers, mission);
-        console.log(numberOfExplorersInNode);
         return numberOfExplorersInNode;
     }
 }
