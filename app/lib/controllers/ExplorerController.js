@@ -8,6 +8,11 @@ class ExplorerController{
         const explorersInNode = ExplorerService.filterByMission(explorers, mission);
         return explorersInNode;
     }
+    static getExplorersUsernamesByMission(mission) {
+        const explorers = Reader.readJsonFile("explorers.json");
+        const usernamesInNode = ExplorerService.getExplorersUsernamesByMission(explorers, mission);
+        return usernamesInNode;
+    }
 }
 
 module.exports = ExplorerController;
