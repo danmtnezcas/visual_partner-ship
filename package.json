@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "linter": "eslint .",
-    "linter-fix": "eslint . --fix"
+    "linter-fix": "eslint . --fix",
+    "server": "node ./app/lib/server.js"
   },
   "repository": {
     "type": "git",
