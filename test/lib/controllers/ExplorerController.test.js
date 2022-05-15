@@ -22,4 +22,14 @@ describe("Unit Tests for ExplorerController class", () => {
         expect(numberOfExplorersInNode).toBe(10);
         //expect(numberOfExplorersInNode).toBe(11);
     });
+    test("Get the type of score", () => {
+        const score1 = ExplorerController.applyValidationInNumber(1);
+        expect(score1).toBe(1);
+        const score3 = ExplorerController.applyValidationInNumber(3);
+        expect(score3).toBe("Fizz");
+        const score5 = ExplorerController.applyValidationInNumber(5);
+        expect(score5).toBe("Buzz");
+        const score15 = ExplorerController.applyValidationInNumber(15);
+        expect(score15).toBe("FizzBuzz");
+    });
 });
