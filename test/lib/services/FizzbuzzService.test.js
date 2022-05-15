@@ -1,6 +1,6 @@
 const Reader = require("../../../app/lib/utils/Reader");
-const ExplorerService = require('../../../app/lib/services/ExplorerService');
-const FizzbuzzService = require('../../../app/lib/services/FizzbuzzService');
+const ExplorerService = require("../../../app/lib/services/ExplorerService");
+const FizzbuzzService = require("../../../app/lib/services/FizzbuzzService");
 
 describe("Unit Tests for FizzbuzzService class", () => {
     test("Get a new list of explorers in node", () => {
@@ -16,6 +16,6 @@ describe("Unit Tests for FizzbuzzService class", () => {
                 expect.objectContaining({"name": "Woopa14", "trick": 14}), // This explorer has a score 14, trick: 14
                 expect.objectContaining({"name": "Woopa15", trick: "FIZZBUZZ"}) // This explorer has a score 15, trick: "FIZZBUZZ"
             ])
-        )
-    })
-})
+        );
+    });
+});

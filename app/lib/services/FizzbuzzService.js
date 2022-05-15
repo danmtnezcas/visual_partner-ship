@@ -15,7 +15,7 @@ class FizzbuzzService {
                 explorer.trick = explorer.score;
                 explorersInNodeApplyValidation.push(explorer);
             }
-        })
+        });
         return explorersInNodeApplyValidation;
     }
 }
